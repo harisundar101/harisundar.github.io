@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<!-- saved from url=(0229)https://c3k2wa5zmgh767td.canvacode.com/codelet/eyJhbGciOiJIUzI1NiJ9.eyJjIjoiYzNrMndhNXptZ2g3Njd0ZCIsImV4cCI6MTc3NTY5MzAyMCwiZCI6IkRBSENhcnd5T1pRIiwiZGVwIjoiREFIQ2Fyd3lPWlEifQ.Nw8HtDEbQROIZW8iGpJ_JBVvyzEucoYeTnQGFQDLKbA/index.html -->
+<html lang="en" class="h-full"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hello World Animation</title>
+  <script src="./3.4.17"></script>
+  <script src="./element_sdk.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com/">
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+  <link href="./css2" rel="stylesheet">
+  <style>
+    html, body {
+      background: transparent !important;
+    }
+    
+    .greeting-text {
+      font-family: 'League Spartan', sans-serif;
+      color: #fffcdc;
+      opacity: 0;
+      position: absolute;
+      text-align: center;
+      width: 100%;
+    }
+    
+    @keyframes fadeInOut {
+      0% {
+        opacity: 0;
+        transform: scale(0.95);
+      }
+      15% {
+        opacity: 1;
+        transform: scale(1);
+      }
+      85% {
+        opacity: 1;
+        transform: scale(1);
+      }
+      100% {
+        opacity: 0;
+        transform: scale(1.05);
+      }
+    }
+    
+    .greeting-text.active {
+      animation: fadeInOut 3s ease-in-out forwards;
+    }
+  </style>
+  <style>body { box-sizing: border-box; }</style>
+  <script src="./lucide.min.js" type="text/javascript"></script>
+  <script src="./data_sdk.js" type="text/javascript"></script>
+ <style>*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/* ! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.relative{position:relative}.flex{display:flex}.h-full{height:100%}.w-full{width:100%}.items-center{align-items:center}.justify-center{justify-content:center}.text-5xl{font-size:3rem;line-height:1}.font-bold{font-weight:700}@media (min-width: 768px){.md\:text-7xl{font-size:4.5rem;line-height:1}}@media (min-width: 1024px){.lg\:text-8xl{font-size:6rem;line-height:1}}</style></head>
+ <body class="h-full" style="background: transparent;">
+  <div id="app-container" class="h-full w-full flex items-center justify-center relative" style="background: transparent;">
+   <div id="greeting-container" class="relative w-full flex items-center justify-center" style="min-height: 120px;"><!-- Greetings will be inserted here -->
+   <div class="greeting-text text-5xl md:text-7xl lg:text-8xl font-bold" id="greeting-0">வணக்கம்</div><div class="greeting-text text-5xl md:text-7xl lg:text-8xl font-bold" id="greeting-1">Hello</div><div class="greeting-text text-5xl md:text-7xl lg:text-8xl font-bold" id="greeting-2">Hola</div><div class="greeting-text text-5xl md:text-7xl lg:text-8xl font-bold" id="greeting-3">Bonjour</div><div class="greeting-text text-5xl md:text-7xl lg:text-8xl font-bold" id="greeting-4">Hallo</div><div class="greeting-text text-5xl md:text-7xl lg:text-8xl font-bold" id="greeting-5">Ciao</div><div class="greeting-text text-5xl md:text-7xl lg:text-8xl font-bold" id="greeting-6">Olá</div><div class="greeting-text text-5xl md:text-7xl lg:text-8xl font-bold active" id="greeting-7">こんにちは</div><div class="greeting-text text-5xl md:text-7xl lg:text-8xl font-bold" id="greeting-8">你好</div><div class="greeting-text text-5xl md:text-7xl lg:text-8xl font-bold" id="greeting-9">안녕하세요</div><div class="greeting-text text-5xl md:text-7xl lg:text-8xl font-bold" id="greeting-10">مرحباً</div><div class="greeting-text text-5xl md:text-7xl lg:text-8xl font-bold" id="greeting-11">नमस्ते</div><div class="greeting-text text-5xl md:text-7xl lg:text-8xl font-bold" id="greeting-12">Привет</div><div class="greeting-text text-5xl md:text-7xl lg:text-8xl font-bold" id="greeting-13">Hej</div><div class="greeting-text text-5xl md:text-7xl lg:text-8xl font-bold" id="greeting-14">Hei</div><div class="greeting-text text-5xl md:text-7xl lg:text-8xl font-bold" id="greeting-15">Hoi</div><div class="greeting-text text-5xl md:text-7xl lg:text-8xl font-bold" id="greeting-16">Cześć</div><div class="greeting-text text-5xl md:text-7xl lg:text-8xl font-bold" id="greeting-17">Szia</div><div class="greeting-text text-5xl md:text-7xl lg:text-8xl font-bold" id="greeting-18">Merhaba</div><div class="greeting-text text-5xl md:text-7xl lg:text-8xl font-bold" id="greeting-19">Xin chào</div><div class="greeting-text text-5xl md:text-7xl lg:text-8xl font-bold" id="greeting-20">Sawubona</div><div class="greeting-text text-5xl md:text-7xl lg:text-8xl font-bold" id="greeting-21">Halo</div><div class="greeting-text text-5xl md:text-7xl lg:text-8xl font-bold" id="greeting-22">สวัสดี</div><div class="greeting-text text-5xl md:text-7xl lg:text-8xl font-bold" id="greeting-23">שלום</div><div class="greeting-text text-5xl md:text-7xl lg:text-8xl font-bold" id="greeting-24">Γεια σας</div></div>
+  </div>
+  <script>
+    const greetings = [
+      "வணக்கம்",
+      "Hello",
+      "Hola",
+      "Bonjour",
+      "Hallo",
+      "Ciao",
+      "Olá",
+      "こんにちは",
+      "你好",
+      "안녕하세요",
+      "مرحباً",
+      "नमस्ते",
+      "Привет",
+      "Hej",
+      "Hei",
+      "Hoi",
+      "Cześć",
+      "Szia",
+      "Merhaba",
+      "Xin chào",
+      "Sawubona",
+      "Halo",
+      "สวัสดี",
+      "שלום",
+      "Γεια σας"
+    ];
+
+    const defaultConfig = {};
+    let config = { ...defaultConfig };
+
+    const container = document.getElementById('greeting-container');
+    const greetingElements = [];
+
+    // Create all greeting elements
+    greetings.forEach((greeting, index) => {
+      const element = document.createElement('div');
+      element.className = 'greeting-text text-5xl md:text-7xl lg:text-8xl font-bold';
+      element.textContent = greeting;
+      element.id = `greeting-${index}`;
+      container.appendChild(element);
+      greetingElements.push(element);
+    });
+
+    let currentIndex = 0;
+
+    function showNextGreeting() {
+      // Remove active class from all
+      greetingElements.forEach(el => {
+        el.classList.remove('active');
+      });
+
+      // Add active class to current
+      greetingElements[currentIndex].classList.add('active');
+
+      // Move to next index
+      currentIndex = (currentIndex + 1) % greetings.length;
+    }
+
+    // Start the animation
+    showNextGreeting();
+    setInterval(showNextGreeting, 3000);
+
+    // Initialize Element SDK
+    window.elementSdk.init({
+      defaultConfig,
+      onConfigChange: async (newConfig) => {
+        config = { ...newConfig };
+      },
+      mapToCapabilities: (config) => ({
+        recolorables: [],
+        borderables: [],
+        fontEditable: undefined,
+        fontSizeable: undefined
+      }),
+      mapToEditPanelValues: (config) => new Map()
+    });
+  </script>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9e8d02a392660f83',t:'MTc3NTYwNjYyMC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script><iframe height="1" width="1" style="position: absolute; top: 0px; left: 0px; border: none; visibility: hidden;" src="./saved_resource.html"></iframe>
+</body></html>
